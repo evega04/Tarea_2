@@ -1,0 +1,121 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f4f4f9;
+}
+h1, h2, h3 {
+  color: #333;
+}
+section {
+  margin-bottom: 40px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* 2.1 Box Model */
+.caja {
+  width: 200px;
+  margin: 20px;
+  padding: 15px;
+  border: 5px solid blue;
+  background: lightblue;
+}
+.caja-inline {
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid red;
+  background: pink;
+}
+
+/* 2.2 Position */
+.posicion {
+  width: 120px;
+  height: 50px;
+  margin: 10px;
+  background: lightgreen;
+  border: 2px solid green;
+}
+.static { position: static; }
+.relative { position: relative; left: 20px; }
+.absolute { position: absolute; top: 50px; left: 250px; background: orange; }
+.fixed { position: fixed; top: 10px; right: 10px; background: purple; color: #fff; }
+
+/* Float y Clear */
+.float {
+  width: 150px;
+  height: 80px;
+  margin: 10px;
+  padding: 10px;
+  color: #fff;
+}
+.ejemplo1 { float: left; background: teal; }
+.ejemplo2 { float: right; background: crimson; }
+.clear { clear: both; }
+
+/* Display */
+.display-block { display: block; background: lightcoral; padding: 10px; }
+.display-inline { display: inline; background: yellow; padding: 5px; }
+.display-inlineblock { display: inline-block; background: lightseagreen; padding: 10px; }
+.display-none { display: none; }
+
+/* Overflow */
+.overflow {
+  width: 200px;
+  height: 60px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  background: #ddd;
+}
+.overflow.visible { overflow: visible; }
+.overflow.hidden { overflow: hidden; }
+.overflow.scroll { overflow: scroll; }
+.overflow.auto { overflow: auto; }
+
+/* Visibility */
+.visible { background: lime; padding: 10px; }
+.hidden { visibility: hidden; background: red; padding: 10px; }
+
+/* Z-Index */
+.zindex {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 1200px;
+  left: 50px;
+}
+.caja1 { background: blue; z-index: 1; }
+.caja2 { background: green; left: 70px; z-index: 5; }
+.caja3 { background: red; left: 140px; z-index: 100; }
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  background: #eee;
+  padding: 20px;
+  border: 2px solid #333;
+}
+.item {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background: steelblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.uno { order: 2; flex-grow: 1; }
+.dos { order: 1; flex-shrink: 2; }
+.tres { flex-basis: 150px; }
+.cuatro { flex: 2; }
+.cinco { align-self: flex-end; }
